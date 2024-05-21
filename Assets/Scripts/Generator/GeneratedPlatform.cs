@@ -1,16 +1,14 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class GeneratedObject : MonoBehaviour
+public class GeneratedPlatform : MonoBehaviour
 {
-    [SerializeField] private List<GeneratedObject> availableNextPrefabs;
+    [SerializeField] private List<GeneratedPlatform> availableNextPrefabs;
     [SerializeField] private Transform nextPlatformGenerationPoint;
 
     public Transform NextPlatformTransformPoint => nextPlatformGenerationPoint;
-    public GeneratedObject GetRandomNext()
+    public GeneratedPlatform GetRandomNext()
     {
         return availableNextPrefabs[Random.Range(0, availableNextPrefabs.Count)];
     }

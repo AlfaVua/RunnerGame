@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3413357564114542391}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CameraFollowPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 967769170640759820}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.5, z: 0}
+  m_LocalPosition: {x: 0, y: 4.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 5820065875243265163}
   - component: {fileID: 1834031250293314428}
   - component: {fileID: 958988186194722069}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,6 +108,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 5820065875243265163}
   lineFollower: {fileID: 958988186194722069}
+  groundRaycastDistance: 0.7
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  collisionRayOffset: {x: 0, y: 0.5, z: 0}
 --- !u!114 &958988186194722069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,7 +139,7 @@ GameObject:
   - component: {fileID: 3271561391823788763}
   - component: {fileID: 1248683291940287154}
   - component: {fileID: 1131022788193332436}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +155,7 @@ Transform:
   m_GameObject: {fileID: 8866480349561047438}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

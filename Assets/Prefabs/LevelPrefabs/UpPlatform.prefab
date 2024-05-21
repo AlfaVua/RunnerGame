@@ -78,6 +78,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   availableNextPrefabs:
   - {fileID: 2612019203318945831, guid: 7dfa7922bcafe234ea976d807f18e0bc, type: 3}
+  - {fileID: 2176697195337240269, guid: bc68b50a57786904a9100dc9f2e4150e, type: 3}
   nextPlatformGenerationPoint: {fileID: 748628847340894543}
 --- !u!1 &4680996023616715540
 GameObject:
@@ -142,7 +143,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 870074d59a4a6b343893a7c49f7bc482, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
