@@ -43,5 +43,6 @@ public class GlobalEvents
 
 public enum EventNames
 {
-    GameOver
+    GameOver,
+    StartNewGame
 }

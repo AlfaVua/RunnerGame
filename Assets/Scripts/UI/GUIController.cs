@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace UI
 {
-    public class GUIController : MonoBehaviour
+    public class GUIController : BaseUICanvas
     {
         [SerializeField] private TextMeshProUGUI scoreText;
 

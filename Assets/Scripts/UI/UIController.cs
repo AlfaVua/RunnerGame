@@ -4,14 +4,18 @@ using UnityEngine;
 public class UIController : MonoBehaviour
 {
     [SerializeField] private GUIController guiController;
+    [SerializeField] private GameOverUIController gameOverController;
+    
     public void ShowGameUI()
     {
-        guiController.gameObject.SetActive(true);
+        guiController.Show();
+        gameOverController.Hide();
     }
 
     public void ShowGameOverUI()
     {
-        guiController.gameObject.SetActive(false);
+        guiController.Hide();
+        gameOverController.Show();
     }
 
     public void UpdateScore(float score)
