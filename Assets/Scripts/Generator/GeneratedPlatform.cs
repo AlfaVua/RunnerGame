@@ -6,8 +6,15 @@ public class GeneratedPlatform : MonoBehaviour
 {
     [SerializeField] private List<GeneratedPlatform> availableNextPrefabs;
     [SerializeField] private Transform nextPlatformGenerationPoint;
+    [SerializeField] private ObstacleGenerator obstacleGenerator;
 
     public Transform NextPlatformTransformPoint => nextPlatformGenerationPoint;
+
+    private void Awake()
+    {
+        obstacleGenerator?.GenerateNew();
+    }
+
     public GeneratedPlatform GetRandomNext()
     {
         return availableNextPrefabs[Random.Range(0, availableNextPrefabs.Count)];

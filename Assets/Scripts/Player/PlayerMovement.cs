@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (rigidBody.velocity.y < -1)
+        if (rigidBody.velocity.y < 0)
         {
             rigidBody.velocity += Physics.gravity * Time.fixedDeltaTime;
         }

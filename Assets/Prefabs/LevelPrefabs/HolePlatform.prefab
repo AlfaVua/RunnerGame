@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 870074d59a4a6b343893a7c49f7bc482, type: 2}
+  - {fileID: 2100000, guid: 6231331d46d5a734981d3bba5c4f5788, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -197,7 +197,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 870074d59a4a6b343893a7c49f7bc482, type: 2}
+  - {fileID: 2100000, guid: fe093db002241f648b82f2676d5a19ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -269,7 +269,9 @@ MonoBehaviour:
   - {fileID: 654781344546833560, guid: 1256a4a186f8ea149b446cc1440edc07, type: 3}
   - {fileID: 3707070075966431535, guid: 6f283be92223bf546b3a0c34f3d70e88, type: 3}
   - {fileID: 2176697195337240269, guid: bc68b50a57786904a9100dc9f2e4150e, type: 3}
+  - {fileID: 2612019203318945831, guid: bdfb206e114add2498e145b4b625ce74, type: 3}
   nextPlatformGenerationPoint: {fileID: 8173818369400638260}
+  obstacleGenerator: {fileID: 0}
 --- !u!1 &6384574107463858621
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,7 +334,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 870074d59a4a6b343893a7c49f7bc482, type: 2}
+  - {fileID: 2100000, guid: 6231331d46d5a734981d3bba5c4f5788, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

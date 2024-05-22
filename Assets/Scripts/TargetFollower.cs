@@ -16,6 +16,6 @@ public class TargetFollower : MonoBehaviour
             positionDifference.x * followSpeed.x,
             positionDifference.y * followSpeed.y,
             positionDifference.z * followSpeed.z
-            );
+            ) * (60 * Time.fixedDeltaTime);
     }
 }

@@ -77,9 +77,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   availableNextPrefabs:
-  - {fileID: 2612019203318945831, guid: 7dfa7922bcafe234ea976d807f18e0bc, type: 3}
+  - {fileID: 2612019203318945831, guid: bdfb206e114add2498e145b4b625ce74, type: 3}
   - {fileID: 2176697195337240269, guid: bc68b50a57786904a9100dc9f2e4150e, type: 3}
   nextPlatformGenerationPoint: {fileID: 748628847340894543}
+  obstacleGenerator: {fileID: 0}
 --- !u!1 &4680996023616715540
 GameObject:
   m_ObjectHideFlags: 0

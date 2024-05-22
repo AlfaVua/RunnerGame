@@ -184,9 +184,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   availableNextPrefabs:
-  - {fileID: 2612019203318945831}
+  - {fileID: 2612019203318945831, guid: bdfb206e114add2498e145b4b625ce74, type: 3}
   - {fileID: 654781344546833560, guid: 1256a4a186f8ea149b446cc1440edc07, type: 3}
   - {fileID: 3707070075966431535, guid: 6f283be92223bf546b3a0c34f3d70e88, type: 3}
   - {fileID: 5936573558550644338, guid: c960acccdd7b9234b8d910c089dd24ca, type: 3}
   - {fileID: 2176697195337240269, guid: bc68b50a57786904a9100dc9f2e4150e, type: 3}
   nextPlatformGenerationPoint: {fileID: 2069047047436575499}
+  obstacleGenerator: {fileID: 0}
