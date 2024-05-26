@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1455df84abcf4fb49c27d651dce03799, type: 3}
+  m_Name: MapObjectWeights
+  m_EditorClassIdentifier: 
+  weights:
+  - weight: 1
+    data: {fileID: 9115944377175435385, guid: 7f43d1a3e73fa6e40a3897299c140748, type: 3}

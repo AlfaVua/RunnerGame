@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,6 +7,9 @@ public class GameOverUIController : BaseUICanvas
 {
     [SerializeField] private Button newGameButton;
     [SerializeField] private Button closeGameButton;
+    [SerializeField] private TextMeshProUGUI totalCoins;
+    [SerializeField] private TextMeshProUGUI maxScore;
+    [SerializeField] private TextMeshProUGUI reachedScore;
     
     private void OnEnable()
     {
@@ -33,5 +37,12 @@ public class GameOverUIController : BaseUICanvas
     private static void StartNewGame()
     {
         GlobalEvents.CallEvent(EventNames.StartNewGame);
+    }
+
+    public void UpdateView(float score, float maxScore, int totalCoins)
+    {
+        this.totalCoins.text = totalCoins.ToString();
+        this.maxScore.text = Mathf.FloorToInt(maxScore).ToString();
+        reachedScore.text = Mathf.FloorToInt(score).ToString();
     }
 }

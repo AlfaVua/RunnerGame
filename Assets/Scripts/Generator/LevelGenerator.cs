@@ -10,6 +10,7 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] public float startingShiftSpeed = 7;
     [SerializeField] private int maxGeneratedObjectAmount = 10;
     [SerializeField] private Transform loosingPoint;
+    [SerializeField] private MapObjectsGenerator objectGenerator;
     private List<GeneratedPlatform> _platformList = new List<GeneratedPlatform>();
     private GeneratedPlatform _lastGeneratedPlatform;
 
@@ -18,6 +19,7 @@ public class LevelGenerator : MonoBehaviour
     public void StartGenerator()
     {
         ClearLevel();
+        objectGenerator.Init();
         ShiftingSpeed = startingShiftSpeed;
         GenerateLevel();
     }
@@ -25,6 +27,7 @@ public class LevelGenerator : MonoBehaviour
     private void ClearLevel()
     {
         _platformList.Clear();
+        objectGenerator.Clear();
         foreach (Transform child in levelContainer)
         {
             Destroy(child.gameObject);
@@ -35,10 +38,10 @@ public class LevelGenerator : MonoBehaviour
     {
         _lastGeneratedPlatform = Instantiate(startingPlatform, levelContainer);
         _platformList.Add(_lastGeneratedPlatform);
-        for (var i = 1; i < maxGeneratedObjectAmount; i++) GenerateNextObject();
+        for (var i = 1; i < maxGeneratedObjectAmount; i++) GenerateNextPlatform();
     }
 
-    private void GenerateNextObject()
+    private void GenerateNextPlatform()
     {
         var newPosition = _lastGeneratedPlatform.NextPlatformTransformPoint.position;
         var nextPrefab = _lastGeneratedPlatform.GetRandomNext();
@@ -50,6 +53,7 @@ public class LevelGenerator : MonoBehaviour
             RemoveLastObject();
         }
         loosingPoint.transform.position = Vector3.up * (FindLowestPlatformY() - 5);
+        objectGenerator.OnPlatformGenerated(randomNext);
     }
 
     private void RemoveLastObject()
@@ -67,12 +71,12 @@ public class LevelGenerator : MonoBehaviour
     private void Update()
     {
         if (_platformList.Count == 0) return;
-        _platformList.ForEach(platform =>
-        {
-            platform.ShiftBack(ShiftingSpeed * Time.deltaTime);
-        });
+        var shiftBy = ShiftingSpeed * Time.deltaTime;
+        _platformList.ForEach(platform => platform.ShiftBack(shiftBy));
+        objectGenerator.UpdateObjectsPosition(shiftBy, removingPoint.position.z);
+        
         if (_platformList[0].transform.position.z > removingPoint.position.z) return;
-        GenerateNextObject();
+        GenerateNextPlatform();
         ShiftingSpeed += .075f;
     }
 }

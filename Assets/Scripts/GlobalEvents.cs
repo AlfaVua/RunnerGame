@@ -44,5 +44,6 @@ public class GlobalEvents
 public enum EventNames
 {
     GameOver,
-    StartNewGame
+    StartNewGame,
+    CoinTaken
 }

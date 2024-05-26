@@ -22,4 +22,14 @@ public class UIController : MonoBehaviour
     {
         guiController.UpdateScore(score);
     }
+
+    public void UpdateGUICoins(int coinAmount)
+    {
+        guiController.UpdateCoins(coinAmount);
+    }
+
+    public void UpdateGameOverView(float score, float maxScore, int totalCoins)
+    {
+        gameOverController.UpdateView(score, maxScore, totalCoins);
+    }
 }

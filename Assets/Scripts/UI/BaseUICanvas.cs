@@ -10,6 +10,7 @@ public class BaseUICanvas : MonoBehaviour
     {
         if (gameObject.activeSelf) return;
         gameObject.SetActive(true);
+        OnShow();
         if (!animator) return;
         animator.Play("Show");
     }
@@ -24,6 +25,10 @@ public class BaseUICanvas : MonoBehaviour
         }
         animator.Play("Hide");
         StartCoroutine(nameof(DisableAfterAnimationComplete));
+    }
+
+    protected virtual void OnShow()
+    {
     }
 
     private IEnumerator DisableAfterAnimationComplete()

@@ -436,3 +436,7 @@ MonoBehaviour:
   - {fileID: 2176697195337240269, guid: bc68b50a57786904a9100dc9f2e4150e, type: 3}
   nextPlatformGenerationPoint: {fileID: 2069047047436575499}
   obstacleGenerator: {fileID: 7801164629811006011}
+  additionalObjectsPositions:
+  - {x: 0, y: 1, z: 0}
+  - {x: 0.57, y: 0.36, z: 0}
+  additionalObjectsGizmosColor: {r: 0.031396866, g: 1, b: 0, a: 0}
