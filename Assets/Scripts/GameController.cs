@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private PlayerMovement player;
     [SerializeField] private UIController uiController;
     [SerializeField] private List<Transform> movementLines;
+    [SerializeField] private ParticleSystem speedEffect;
 
     [SerializeField] private UserData userData;
 
@@ -48,8 +49,17 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
+        UpdateSpeedEffect();
         _score += levelGenerator.ShiftingSpeed * .1f * Time.deltaTime;
         uiController.UpdateScore(_score);
+    }
+
+    private void UpdateSpeedEffect()
+    {
+        var main = speedEffect.main;
+        var emission = speedEffect.emission;
+        emission.rateOverTimeMultiplier = 1 + levelGenerator.ShiftingSpeed / 50;
+        main.startSpeed = 15 + levelGenerator.ShiftingSpeed / 2;
     }
 
     private void OnCoinPickup(object data)

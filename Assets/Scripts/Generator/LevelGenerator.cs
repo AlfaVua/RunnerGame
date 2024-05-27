@@ -9,7 +9,7 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private Transform removingPoint;
     [SerializeField] public float startingShiftSpeed = 7;
     [SerializeField] private int maxGeneratedObjectAmount = 10;
-    [SerializeField] private Transform loosingPoint;
+    [SerializeField] private Transform losingPoint;
     [SerializeField] private MapObjectsGenerator objectGenerator;
     private List<GeneratedPlatform> _platformList = new List<GeneratedPlatform>();
     private GeneratedPlatform _lastGeneratedPlatform;
@@ -52,7 +52,7 @@ public class LevelGenerator : MonoBehaviour
         {
             RemoveLastObject();
         }
-        loosingPoint.transform.position = Vector3.up * (FindLowestPlatformY() - 5);
+        losingPoint.transform.position = Vector3.up * (FindLowestPlatformY() - 5);
         objectGenerator.OnPlatformGenerated(randomNext);
     }
 

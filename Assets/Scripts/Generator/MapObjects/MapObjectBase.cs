@@ -5,14 +5,17 @@ public class MapObjectBase : MonoBehaviour
     [SerializeField] private float distanceToTheGround;
     [SerializeField] private LayerMask groundMask;
 
-    public float DistanceToTheGround => distanceToTheGround;
+    private void Start()
+    {
+        SnapToTheGround();
+    }
 
-    public Vector3 GetPosition(Vector3 point)
+    private void SnapToTheGround()
     {
         var groundOffset = Vector3.up * distanceToTheGround;
-        Physics.Raycast(point + groundOffset + Vector3.up, Vector3.down, out var hitInfo, float.MaxValue, groundMask);
-        if (hitInfo.collider is null) return Vector3.zero;
-        return hitInfo.point + groundOffset;
+        Physics.Raycast(transform.position + groundOffset + Vector3.up * 10, Vector3.down, out var hitInfo, float.MaxValue, groundMask);
+        if (hitInfo.collider is null) return;
+        transform.position = hitInfo.point + groundOffset;
     }
     
     private void OnDrawGizmos()
