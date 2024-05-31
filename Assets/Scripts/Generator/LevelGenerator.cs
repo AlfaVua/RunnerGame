@@ -30,6 +30,7 @@ public class LevelGenerator : MonoBehaviour
         objectGenerator.Clear();
         foreach (Transform child in levelContainer)
         {
+            child.gameObject.SetActive(false); // prevent incorrect collision when generating level
             Destroy(child.gameObject);
         }
     }
